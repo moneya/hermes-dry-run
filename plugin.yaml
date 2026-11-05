@@ -1,0 +1,20 @@
+name: dry-run
+version: 0.1.0
+description: >-
+  Dry-run mode for Hermes. A tool_execution middleware that does not call the tool at all:
+  it returns a report of what the call would have done and how much damage it could cause.
+  Reads pass through; anything that changes state is simulated with a risk tier (write,
+  destructive, irreversible) derived from the command itself. Lets an agent be reviewed
+  before it is trusted.
+manifest_version: 1
+kind: standalone
+author: McDonald Aladi
+license: MIT
+homepage: https://github.com/moneya/hermes-dry-run
+
+provides_tools:
+  - dry_run_report
+  - dryrun_control
+
+provides_middleware:
+  - tool_execution
