@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.dirname(HERE))
 import dryrun_simulate as sim  # noqa: E402
 
 CASES = [
-    ("terminal", {"command": "rm -rf ~/projects/legacy && git push origin main --force"}),
+    ("terminal", {"command": "rm -rf build/legacy && git push origin main --force"}),
     ("terminal", {"command": "php artisan migrate --force"}),
     ("terminal", {"command": "ls -la src/"}),
     ("write_file", {"path": "app/Services/Billing.php",

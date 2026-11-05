@@ -12,7 +12,7 @@ DRY RUN — NOT EXECUTED
 tool      : terminal
 risk      : IRREVERSIBLE  (cannot be undone)
 why       : recursive force delete; force-push rewrites remote history
-command   : rm -rf ~/projects && git push origin main --force
+command   : rm -rf build/legacy && git push origin main --force
 --------------------------------------------------------------------------
 Nothing was executed. No file was written, no command ran, nothing was sent.
 ```

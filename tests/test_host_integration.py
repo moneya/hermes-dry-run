@@ -38,9 +38,9 @@ def main() -> int:
     # ---- 1. mutating call: must be simulated, never executed
     out1 = run_tool_execution_middleware(
         "terminal",
-        {"command": "rm -rf ~/projects && git push origin main --force"},
+        {"command": "rm -rf build/legacy && git push origin main --force"},
         real_tool,
-        original_args={"command": "rm -rf ~/projects && git push origin main --force"},
+        original_args={"command": "rm -rf build/legacy && git push origin main --force"},
     )
     t1 = str(out1)
     step1_ran = bool(ran)
